@@ -1,12 +1,2 @@
-- 👋 Hi, I’m @Wilberforcedev
-- 👀 I’m interested in web development 
-- 🌱 I’m currently learning CSS and HTML
-- 💞️ I’m looking to collaborate and work together with y'all 
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
-<!---
-Wilberforcedev/Wilberforcedev is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Web Application Development and Mobile App Development using modern technologies including React, Laravel, JavaScript, Node.js, Dart, and Flutter. I enjoy building scalable, high-performance, and responsive systems that provide smooth user experiences across web and mobile platforms that can run seamlesslyon both iOS andAndroid.
+Creative and dedicated Graphic Designer and Full-Stack Web & Mobile Application Developer with a strong passion for building visually appealing designs and user-friendly digital experiences. I combine creativity and technology to develop professional branding, modern web applications, and cross-platform mobile apps that solve real business problems.
