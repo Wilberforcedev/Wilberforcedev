@@ -24,7 +24,7 @@ Streamlit prints a local URL, usually http://localhost:8501.
 - Isolation Forest flags unusual combinations of transaction amount, UTC hour, weekday, category, country, and channel.
 - Customer-specific rules compare each transaction with that customer's earlier activity: amount spikes, new categories, new countries, and bursts of three or more transactions in ten minutes.
 - A percentile rule highlights amounts at or above the 99th percentile of the uploaded batch.
-- Search and risk filters help narrow the queue; an investigation panel shows signal reasons and the prior median when enough history exists.
+- Daily transaction and alert trends, customer and risk filters, and search help narrow the queue; an investigation panel shows signal reasons and the prior median when enough history exists.
 - Analysts can mark a selected transaction Pending, Cleared, Escalated, or Confirmed fraud. These decisions last for the current app session and appear in the CSV export.
 - Results can be downloaded as a CSV, including risk signals, currency, and analyst review outcome.
 
@@ -53,6 +53,10 @@ A score is a queue-prioritization aid, not a calibrated fraud probability. A fla
 ## Deployment
 
 For a local, container, or Streamlit Community Cloud setup, see [Deployment guide](docs/deployment.md). Before using real customer records, review the privacy, access, retention, and validation guidance there.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](../LICENSE) for details.
 
 ## Project files
 
