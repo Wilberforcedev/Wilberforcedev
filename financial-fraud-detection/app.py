@@ -413,8 +413,13 @@ else:
 export = scored.copy()
 export["timestamp"] = export["timestamp"].dt.strftime("%Y-%m-%dT%H:%M:%SZ")
 decisions = st.session_state.get("review_decisions", {})
-export["analyst_review_outcome"] = export["transaction_id"].astype(str).map(decisions).fillna(
-    np.where(export["review_flag"], "Pending", "Not flagged")
+review_outcomes = export["transaction_id"].astype(str).map(decisions)
+default_outcomes = pd.Series(
+    np.where(export["review_flag"], "Pending", "Not flagged"),
+    index=export.index,
+)
+export["analyst_review_outcome"] = review_outcomes.where(
+    review_outcomes.notna(), default_outcomes
 )
 export["currency"] = currency
 st.download_button(
