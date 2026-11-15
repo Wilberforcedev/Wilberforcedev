@@ -383,7 +383,7 @@ table = table.rename(columns={
 st.dataframe(
     table,
     hide_index=True,
-    use_container_width=True,
+    width="stretch",
     column_config={
         "Amount": st.column_config.NumberColumn(format="%,.0f"),
         "Prior median": st.column_config.NumberColumn(format="%,.0f"),
