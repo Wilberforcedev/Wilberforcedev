@@ -12,7 +12,7 @@ Requires Python 3.10 or newer.
 cd financial-fraud-detection
 python -m venv .venv
 source .venv/bin/activate
-# Windows PowerShell: .venv\\Scripts\\Activate.ps1
+# Windows PowerShell: .\\.venv\\Scripts\\Activate.ps1
 python -m pip install -r requirements.txt
 streamlit run app.py
 ```
