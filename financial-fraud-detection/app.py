@@ -324,11 +324,27 @@ with right:
                 second.markdown(f"### {item['risk_score']} / 100")
                 second.caption(RISK_LABELS.get(item["risk_level"], item["risk_level"]))
 
+st.markdown('<div class="section">TRANSACTION TREND</div>', unsafe_allow_html=True)
+daily_activity = (
+    scored.assign(day=scored["timestamp"].dt.floor("D"))
+    .groupby("day")
+    .agg(
+        Transactions=("transaction_id", "count"),
+        Flagged=("review_flag", "sum"),
+    )
+)
+st.line_chart(daily_activity, height=230)
+
 st.markdown('<div class="section">TRANSACTION ACTIVITY</div>', unsafe_allow_html=True)
-search_col, risk_col, flagged_col = st.columns([1.4, 0.8, 0.8])
-search = search_col.text_input("Search activity", placeholder="Transaction, customer, merchant…")
+search_col, risk_col, flagged_col, customer_col = st.columns([1.3, 0.8, 0.7, 1.2])
+search = search_col.text_input("Search activity", placeholder="Transaction, merchant…")
 risk_filter = risk_col.selectbox("Risk level", ["All", "Critical", "High", "Medium", "Low"])
 flagged_only = flagged_col.toggle("Flagged only", value=False)
+customer_filter = customer_col.multiselect(
+    "Customer",
+    sorted(scored["customer_id"].unique()),
+    placeholder="All customers",
+)
 
 view = scored.copy()
 if search:
@@ -340,6 +356,8 @@ if risk_filter != "All":
     view = view[view["risk_level"] == risk_filter]
 if flagged_only:
     view = view[view["review_flag"]]
+if customer_filter:
+    view = view[view["customer_id"].isin(customer_filter)]
 
 table = view[[
     "transaction_id", "timestamp", "customer_id", "merchant", "category",
