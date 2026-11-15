@@ -1,0 +1,14 @@
+transaction_id,customer_id,timestamp,amount,merchant,category,country,channel
+TX-A-001,CUST-001,2026-10-01T08:15:00Z,28000,City Mart,Groceries,Uganda,POS
+TX-A-002,CUST-001,2026-10-02T17:32:00Z,45000,Shell,Fuel,Uganda,POS
+TX-A-003,CUST-001,2026-10-03T12:40:00Z,38000,Cafe Javas,Dining,Uganda,Mobile
+TX-A-004,CUST-001,2026-10-04T19:05:00Z,62000,Fresh Basket,Groceries,Uganda,POS
+TX-A-005,CUST-001,2026-10-05T09:11:00Z,51000,City Fuel,Fuel,Uganda,POS
+TX-A-006,CUST-001,2026-10-06T18:24:00Z,42000,The Bistro,Dining,Uganda,Mobile
+TX-A-007,CUST-001,2026-10-08T02:15:00Z,5500000,New Online Store,Electronics,Kenya,Online
+TX-B-001,CUST-002,2026-10-01T07:52:00Z,74000,UMEME,Utilities,Uganda,Online
+TX-B-002,CUST-002,2026-10-02T13:23:00Z,33000,Market Square,Groceries,Uganda,POS
+TX-B-003,CUST-002,2026-10-03T18:44:00Z,87000,TotalEnergies,Fuel,Uganda,POS
+TX-B-004,CUST-002,2026-10-04T11:09:00Z,56000,Game Zone,Entertainment,Uganda,Card
+TX-B-005,CUST-002,2026-10-05T20:31:00Z,91000,Metro Boutique,Shopping,Uganda,Online
+TX-B-006,CUST-002,2026-10-06T16:17:00Z,48000,City Mart,Groceries,Uganda,POS
